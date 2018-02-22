@@ -7,6 +7,10 @@ import { minify } from 'uglify-es';
 
 const pkg = require('./package.json');
 
+const globals = {
+  'vue2-touch-events': 'Vue2TouchEvents'
+}
+
 const external = Object.keys(pkg.dependencies);
 const plugins = [
   vue({
@@ -40,4 +44,5 @@ export default {
   ],
   plugins,
   external,
+  globals,
 };

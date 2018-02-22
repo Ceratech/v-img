@@ -62,7 +62,7 @@
       </div>
 
       <div class="content-v-img">
-        <img :src="images[currentImageIndex]" @click="next">
+        <img :src="images[currentImageIndex]" @click="next" v-touch:swipe="handleSwipe">
       </div>
 
     </div>
@@ -146,6 +146,13 @@ export default {
         this.uiTimeout = setTimeout(() => {
           this.visibleUI = false;
         }, 3500);
+      }
+    },
+    handleSwipe(direction) {
+      if (direction === 'left') {
+        this.prev();
+      } else if (direction === 'right') {
+        this.next();
       }
     },
   },

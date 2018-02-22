@@ -1,17 +1,17 @@
 {
-  "name": "v-img",
-  "version": "0.2.0",
-  "description": "Vuejs plugin for image viewing",
+  "name": "v-img-swipe",
+  "version": "0.2.1",
+  "description": "Vuejs plugin for image viewing with swipe support",
   "main": "dist/v-img.js",
   "module": "dist/v-img.mjs",
   "jsnext:main": "dist/v-img.mjs",
-  "author": "Crowdbotics team",
+  "author": "Crowdbotics team / Cerarech",
   "scripts": {
     "prebuild": "eslint lib test",
     "build": "cross-env NODE_ENV=production rollup -c",
     "watch": "cross-env NODE_ENV=development rollup -c -w"
   },
-  "repository": "https://github.com/crowdbotics/v-img",
+  "repository": "https://github.com/Ceratech/v-img-swipe",
   "keywords": [
     "vue",
     "images",
@@ -26,8 +26,9 @@
     "lib",
     "dist"
   ],
-  "homepage": "https://github.com/crowdbotics/v-img",
-  "dependencies": {},
+  "dependencies": {
+    "vue2-touch-events": "^1.0.0"
+  },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "babel-plugin-external-helpers": "^6.22.0",
